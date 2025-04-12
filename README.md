@@ -28,6 +28,7 @@ itinerary-planner/
 │   └── itinerary_task.py           # Task for itinerary creation
 ├── app.py                          # Main application entry point
 ├── crew.py                         # Crew creation and management
+├── main.ipynb                      # Jupyter notebook for interactive development and testing
 ├── requirements.txt                # Project dependencies
 └── README.md                       # Project documentation
 ```
@@ -43,10 +44,14 @@ itinerary-planner/
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd itinerary-planner
 ```
 
-2. Create and activate a virtual environment (recommended):
+2. Change to the project directory:
+```bash
+cd Itinerary-Planner
+```
+
+3. Create and activate a virtual environment (recommended):
 ```bash
 # Windows
 python -m venv venv
@@ -57,30 +62,51 @@ python -m venv venv
 source venv/bin/activate
 ```
 
-3. Install the required dependencies:
+4. Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file in the project root and add your OpenAI API key:
+5. Create a `.env` file in the project root and add your OpenAI API key:
 ```
 OPENAI_API_KEY=your_api_key_here
 ```
 
 ## Usage
 
+### Running the Application
+
 1. Make sure your virtual environment is activated and you have set up your `.env` file.
 
-2. Run the application:
-```bash
-python app.py
-```
+2. You can run the application in two ways:
 
-3. The application will use the default location (Goa) and duration (5 days). To modify these, edit the `app.py` file:
-```python
-location = "Your Destination"  # Change this to your desired location
-days = 7  # Change this to your desired number of days
-```
+   a. Using the Python script:
+   ```bash
+   python app.py
+   ```
+
+   b. Using the Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
+   Then open `main.ipynb` for an interactive development experience.
+
+3. The application will use the default location (Goa) and duration (5 days). To modify these:
+   - In `app.py`:
+   ```python
+   location = "Your Destination"  # Change this to your desired location
+   days = 7  # Change this to your desired number of days
+   ```
+   - In `main.ipynb`, you can modify these parameters in the notebook cells
+
+### Interactive Development with Jupyter Notebook
+
+The `main.ipynb` file provides an interactive environment for:
+- Testing individual agents and tasks
+- Visualizing the workflow
+- Experimenting with different parameters
+- Debugging and development
+- Step-by-step execution of the itinerary planning process
 
 ## Components
 
