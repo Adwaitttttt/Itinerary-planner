@@ -11,6 +11,7 @@ COPY tasks/ ./tasks/
 COPY templates/ ./templates/
 COPY crew.py .
 COPY itinerary_planner.py .
+COPY .env .
 
 #Install the python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
